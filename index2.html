@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ФИО</title>
+<style type="text/css">
+body {
+background-size: contain;
+background-color: #edebeb;
+margin: 0px;
+}
+div {
+height: 700px;
+width: 900px;
+background-color: #fff;
+margin: 110px auto auto auto;
+}
+ul {
+margin: 0px -7px 0px 0px;
+height: 500px;
+}
+li {
+height: 60px;
+margin-top: 10px;
+list-style-type: none;
+}
+input {
+margin-top: 60px;
+width: 500px;
+height: 40px;
+}
+#plashkaFio {
+position: relative;
+top: 40px;
+}
+#fio {
+position: relative;
+bottom: 30px;
+}
+#plashkaFormat {
+position: relative;
+top: 7px;
+}
+.fn {
+position: relative;
+bottom: 30px;
+}
+.login {
+position: relative;
+bottom: 10px;
+}
+#knopka {
+position: relative;
+bottom: 0px;
+width: 100px;
+left: 400px;
+top: 20px;
+text-shadow: 0px 4px 7px #ffffff;
+}
+</style>
+</head>
+<body>
+<script>
+function f05(){
+var fio = document.getElementById("fio");
+var fn = document.getElementsByClassName("fn");
+var arr = fio.value.split(' ');
+for(var i=0; i<arr.length; i++){
+fn[i].value = arr[i];
+}
+}
+</script>
+<div id="blockName">
+<ul>
+<p id="plashkaFio">ФИО</p>
+<li><input id="fio" type="text" placeholder="Введите ФИО" onblur='f05()' required="required"><li>
+<p id="plashkaFormat">Формат: [фамилия] [имя] [отчество]</p>
+<li><input class="fn" type="text" placeholder='Фамилия' disabled></li>
+<li><input class="fn" type="text" placeholder='Имя' disabled></li>
+<li><input class="fn"  type="text" placeholder='Отчество' disabled></li>
+<li><input class="login" type="text" placeholder="Логин"></li>
+<input type="submit" id="knopka" value="НАЙТИ">
+</ul>
+</div>
+</body>
+</html>
